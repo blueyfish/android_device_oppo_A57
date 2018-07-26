@@ -1,6 +1,7 @@
 # All unpinned blobs below are extracted from A57_11.A.32_0320_201912050917
 # daisy Package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 # FP3 Package version: Fairphone/FP3/FP3:13/6.A.031.5/gms-fa7632b5:user/release-keys
+# R9s Package version: R9s_11.A.53_0530_201904131805
 
 # Camera
 system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
@@ -372,8 +373,10 @@ vendor/lib/libmmcamera_isp_chroma_suppress40.so
 vendor/lib/libmmcamera_isp_mce40.so
 vendor/lib/libmmcamera_isp_linearization40.so
 vendor/lib/libmmcamera_isp_template.so
-vendor/lib/libmmcamera_isp_color_correct40.so
 vendor/lib/libmmcamera_isp_gamma40.so
+
+# Camera isp - from R9s
+vendor/lib/libmmcamera_isp_color_correct40.so|58307a0452b00aa795715fdee7798baa3598637a
 
 # Camera firmware - from daisy
 vendor/firmware/cpp_firmware_v1_10_0.fw|cf9458601aa4bbe9c57acfc1c7d0f158386ace9f
