@@ -15,5 +15,8 @@ persist.data.netmgrd.qos.enable=true
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 
+# System
+ro.kernel.ebpf.supported=false
+
 # Time Services
 persist.timed.enable=true
