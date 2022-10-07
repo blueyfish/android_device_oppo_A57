@@ -11,6 +11,13 @@ function blob_fixup() {
         vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
+        vendor/lib/libmmcamera2_sensor_modules.so)
+            sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"
+            ;;
+        vendor/lib/libmmcamera2_stats_modules.so)
+            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
+        ;;
     esac
 }
 
