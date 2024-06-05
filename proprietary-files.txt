@@ -33,8 +33,3 @@ etc/firmware/b_fp.b04:vendor/firmware/b_fp.b04
 etc/firmware/b_fp.b05:vendor/firmware/b_fp.b05
 etc/firmware/b_fp.b06:vendor/firmware/b_fp.b06
 etc/firmware/b_fp.mdt:vendor/firmware/b_fp.mdt
-
-# Sensors
-etc/sensors/sensor_def_16061.conf:vendor/etc/sensors/sensor_def_16061.conf
-vendor/lib/sensors.ssc.so
-vendor/lib64/sensors.ssc.so
