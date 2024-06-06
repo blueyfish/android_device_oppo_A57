@@ -1,4 +1,4 @@
-# Proprietary files - from A57_11_A.32_191205 build, unless pinned
+# Proprietary files - from CPH1701EX_11_A.36_181009 build, unless pinned
 
 # Audio-ACDB
 etc/acdbdata/16061/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -25,11 +25,11 @@ etc/firmware/alipay.b06:vendor/firmware/alipay.b06
 etc/firmware/alipay.mdt:vendor/firmware/alipay.mdt
 
 # Fingerprint - FPC firmware
-etc/firmware/b_fp.b00:vendor/firmware/b_fp.b00
-etc/firmware/b_fp.b01:vendor/firmware/b_fp.b01
-etc/firmware/b_fp.b02:vendor/firmware/b_fp.b02
-etc/firmware/b_fp.b03:vendor/firmware/b_fp.b03
-etc/firmware/b_fp.b04:vendor/firmware/b_fp.b04
-etc/firmware/b_fp.b05:vendor/firmware/b_fp.b05
-etc/firmware/b_fp.b06:vendor/firmware/b_fp.b06
-etc/firmware/b_fp.mdt:vendor/firmware/b_fp.mdt
+etc/firmware/fingerprint.b00:vendor/firmware/fingerprint.b00
+etc/firmware/fingerprint.b01:vendor/firmware/fingerprint.b01
+etc/firmware/fingerprint.b02:vendor/firmware/fingerprint.b02
+etc/firmware/fingerprint.b03:vendor/firmware/fingerprint.b03
+etc/firmware/fingerprint.b04:vendor/firmware/fingerprint.b04
+etc/firmware/fingerprint.b05:vendor/firmware/fingerprint.b05
+etc/firmware/fingerprint.b06:vendor/firmware/fingerprint.b06
+etc/firmware/fingerprint.mdt:vendor/firmware/fingerprint.mdt
