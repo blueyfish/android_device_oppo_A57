@@ -15,7 +15,7 @@ function blob_fixup() {
             sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"
             ;;
         vendor/lib/libmmcamera2_stats_modules.so)
-            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
         ;;
     esac
