@@ -808,7 +808,6 @@ vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
 vendor/bin/qti
-vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
@@ -866,6 +865,9 @@ vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
+
+# Radio - from op486b - CPH1955EX_11.A.05_0050_201911190251
+vendor/bin/rmt_storage|8e86ba931e3a12a5b9b3bff0024dd916e7d7f791
 
 # QC RIL
 vendor/bin/hw/qcrild
