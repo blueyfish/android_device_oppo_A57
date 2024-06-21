@@ -473,16 +473,6 @@ etc/firmware/alipay.b05:vendor/firmware/alipay.b05|648187fbf1a063bb4a637d99b2866
 etc/firmware/alipay.b06:vendor/firmware/alipay.b06|aaa8b57e75a45ec6193d18a601f7115613072b79
 etc/firmware/alipay.mdt:vendor/firmware/alipay.mdt|01232028fe96f9562f930cd27c8482eb462b4fd8
 
-# Fingerprint - FPC firmware - from stock - CPH1701EX_11_A.36_181009
-etc/firmware/fingerprint.b00:vendor/firmware/fingerprint.b00|22912d59d481d844b58079ed32a7e90af8a1bcaa
-etc/firmware/fingerprint.b01:vendor/firmware/fingerprint.b01|83d10cf370f12e99ed21a095bdf78640370625bb
-etc/firmware/fingerprint.b02:vendor/firmware/fingerprint.b02|b7f8565c88f65d0a974c52ba5edf921ece9625c5
-etc/firmware/fingerprint.b03:vendor/firmware/fingerprint.b03|f5fb7954df0af21f55ac00769c400c0ff90b9420
-etc/firmware/fingerprint.b04:vendor/firmware/fingerprint.b04|d4924a57836d062463aa4caaa497669f03de372c
-etc/firmware/fingerprint.b05:vendor/firmware/fingerprint.b05|74a2339683cb21e20267c092900ad9c942b816a7
-etc/firmware/fingerprint.b06:vendor/firmware/fingerprint.b06|341f188722aab317d78fdbdfdd0fbe52b2c0f25f
-etc/firmware/fingerprint.mdt:vendor/firmware/fingerprint.mdt|03a3bb29a26f97dda8abdb3b7a1533e0cc1b10f5
-
 # FM - from X00PD - ASUS_X00PD-user 10 QKQ1.191002.002 17.00.2003.23-20200401 release-keys
 lib64/fm_helium.so|10bf2489995d3717ebb0f91c73ffec3504fd0159
 lib64/libfm-hci.so|a281726ca32cd52609c9b3e65345eb7dd868339c

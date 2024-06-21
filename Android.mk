@@ -86,4 +86,19 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WIFI_FIRMWARE_SYMLINKS)
 
+FINGERPRINT_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware
+$(FINGERPRINT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating fingerprint firmware symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b00 $@/fingerprint.b00
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b01 $@/fingerprint.b01
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b02 $@/fingerprint.b02
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b03 $@/fingerprint.b03
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b04 $@/fingerprint.b04
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b05 $@/fingerprint.b05
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.b06 $@/fingerprint.b06
+	$(hide) ln -sf /vendor/firmware_mnt/image/fingerpr.mdt $@/fingerprint.mdt
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FINGERPRINT_FIRMWARE_SYMLINKS)
+
 endif
