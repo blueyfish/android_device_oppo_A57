@@ -67,11 +67,19 @@ function blob_fixup() {
         vendor/bin/mm-qcamera-daemon)
             sed -i "s/\xca\x56\xbc\xc0/\xca\x56\xd0\xc0/" "${2}"
             ;;
+        vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.A57)
+            # Correct firmware files
+            sed -i 's|/vendor/firmware_mnt/image/|fingerprint\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0|g' "${2}"
+            sed -i 's|\x21\x0c\x06\x91|\x21\x0c\x28\x91|g' "${2}"
+            sed -i 's|\xc1\xff\xff\xb0\xc2\xff\xff\x90\xe8\x03\x19\x32|\xc1\xff\xff\x90\xc2\xff\xff\xb0\xe8\x03\x19\x32|g' "${2}"
+            sed -i 's|\x42\xe0\x3b\x91|\x42\x0c\x06\x91|g' "${2}"
+            ;;
+        vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.A57.rc)
+            sed -i 's/mata/A57/g' "${2}"
+            sed -i 's/service fps_hal_A57/service vendor.fps_hal_A57/g' "${2}"
+            ;;
         vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
-            ;;
-        vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
-            sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"

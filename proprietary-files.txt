@@ -458,20 +458,9 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# Fingerprint - FPC - from stock - CPH1701EX_11_A.36_181009
-lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2
-lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|1e481a2ddd54fd8fde4fce2107696df189dc7b41
-lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|cf54ba9948fc2e3e82b723224733242a5aaa1176
-
-# Fingerprint - Alipay firmware - from stock - CPH1701EX_11_A.36_181009
-etc/firmware/alipay.b00:vendor/firmware/alipay.b00|9dd173e4faceb2b276d4847dbb5b2a1f397de2e4
-etc/firmware/alipay.b01:vendor/firmware/alipay.b01|69f22449bfad7a40faed408eb348697f9dde6605
-etc/firmware/alipay.b02:vendor/firmware/alipay.b02|e2886279537ea48c80e3182eeef434c1eae2fede
-etc/firmware/alipay.b03:vendor/firmware/alipay.b03|a862f7334373dd04778983e2d44204ae9c65684b
-etc/firmware/alipay.b04:vendor/firmware/alipay.b04|b9d138bd786ba93efaebdf62aa8859f587255b02
-etc/firmware/alipay.b05:vendor/firmware/alipay.b05|648187fbf1a063bb4a637d99b2866c057ba99fcf
-etc/firmware/alipay.b06:vendor/firmware/alipay.b06|aaa8b57e75a45ec6193d18a601f7115613072b79
-etc/firmware/alipay.mdt:vendor/firmware/alipay.mdt|01232028fe96f9562f930cd27c8482eb462b4fd8
+# Fingerprint - FPC - from mata - mata-user-10-QQ1A.200105.032-540-release-keys
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.mata:vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.A57
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc:vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.A57.rc
 
 # Fingerprint - FPC firmware - from stock - CPH1701EX_11_A.36_181009
 etc/firmware/fingerprint.b00:vendor/firmware/fingerprint.b00|22912d59d481d844b58079ed32a7e90af8a1bcaa
