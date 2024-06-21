@@ -395,6 +395,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
 	TetheringConfigOverlay \
     wcnss_service \
+    libwcnss_qmi \
     WifiOverlay \
     wificond \
     wpa_supplicant \
