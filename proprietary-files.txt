@@ -458,10 +458,10 @@ vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
-# Fingerprint - FPC - from stock - CPH1701EX_11_A.36_181009
-lib64/hw/fingerprint.msm8937.so:vendor/lib64/hw/fingerprint.msm8937.so|e5bda11ba1634777a33b896c37145723f4bedfd2
-lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|1e481a2ddd54fd8fde4fce2107696df189dc7b41
-lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|cf54ba9948fc2e3e82b723224733242a5aaa1176
+# Fingerprint - FPC - from r9s - R9s_11.A.53_0530_201904131805
+lib64/hw/fingerprint.msm8953.so:vendor/lib64/hw/fingerprint.msm8937.so|fea5334862f43e2ec98b9228a45acadf3fb7f9c7
+lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so|c7c25eac9d63136131005a00719d03dccfffcb29|8c3434ec3d9ffc631487be2b0a0063ff18becd90
+lib64/libalipay_factory.so:vendor/lib64/libalipay_factory.so|3ef3a55e90c3d4414490fbb52ef0642eda3c335f|5e17ad369f6d5523f6ec79dbc2c78bd77e4daf24
 
 # Fingerprint - Alipay firmware - from stock - CPH1701EX_11_A.36_181009
 etc/firmware/alipay.b00:vendor/firmware/alipay.b00|9dd173e4faceb2b276d4847dbb5b2a1f397de2e4

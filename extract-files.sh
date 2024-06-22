@@ -70,8 +70,25 @@ function blob_fixup() {
         vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
-        vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
+        vendor/lib64/libalipay_factory.so)
+            # Patch firmware location
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
+            ;;
+        vendor/lib64/lib_fpc_tac_shared.so)
+            # Patch firmware location
+            sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
+
+            # Use specific fingerprint app
+            sed -i 's|ro.build.product|fingerprint\x0\x0\x0\x0\x0|g' "${2}"
+            sed -i 's|\xbf\x0e\x00\x71\x81\x0c\x00\x54|\xbf\x0e\x00\x71\x64\x00\x00\x14|g' "${2}"
+            sed -i 's|\x22\x00\x00\xb0\x21\x9c\x1f\x91\x42\x04\x20\x91|\x22\x00\x00\x90\x21\x9c\x1f\x91\x42\xc0\x12\x91|g' "${2}"
+            sed -i 's|\x22\x00\x00\xb0\x21\x9c\x1f\x91\x42\xf0\x1f\x91|\x22\x00\x00\x90\x21\x9c\x1f\x91\x42\xc0\x12\x91|g' "${2}"
+
+            # Remove fp_id check
+            sed -i 's|\x11\x4e\x46\xf9|\xc0\x03\x5f\xd6|g' "${2}"
+
+            # Disable hypnus support
+            sed -i 's|\xed\xf6\xff\x97|\x1f\x20\x03\xd5|g' "${2}"
             ;;
         vendor/lib/libmmcamera2_sensor_modules.so)
             sed -i "s/\/system\/etc\/camera\//\/vendor\/etc\/camera\//g" "${2}"
