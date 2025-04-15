@@ -67,6 +67,9 @@ function blob_fixup() {
         vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
+        vendor/bin/mm-qcamera-daemon)
+            sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "${2}"
+            ;;
         vendor/lib64/libalipay_factory.so|vendor/lib64/lib_fpc_tac_shared.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
             ;;
