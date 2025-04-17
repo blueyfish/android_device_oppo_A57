@@ -19,3 +19,6 @@ genfscon proc /touchpanel                                                       
 
 # Rmt
 genfscon debugfs /rmt_storage                                                       u:object_r:debugfs_rmt:s0
+
+# NV backup
+genfscon sysfs /devices/platform/soc/0.qcom,oembackup_sharedmem/uio/uio1     u:object_r:sysfs_uio_file:s0
