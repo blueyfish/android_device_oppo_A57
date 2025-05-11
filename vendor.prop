@@ -32,6 +32,7 @@ ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
 # Camera
 persist.camera.gyro.android=0
 persist.camera.gyro.disable=1
+persist.camera.is_type=1
 persist.camera.isp.clock.optmz=0
 persist.vendor.camera.HAL3.enabled=1
 
