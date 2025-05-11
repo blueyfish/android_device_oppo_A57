@@ -27,6 +27,8 @@ vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 
 # Camera
+persist.camera.gyro.disable=0
+persist.camera.isp.clock.optmz=0
 persist.vendor.camera.HAL3.enabled=1
 
 # CNE
