@@ -1,4 +1,5 @@
 # Camera
+oppo.camera.                            u:object_r:camera_prop:s0
 persist.camera.                         u:object_r:camera_prop:s0
 
 # Fingerprint
