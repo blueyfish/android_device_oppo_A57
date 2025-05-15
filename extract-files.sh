@@ -109,6 +109,9 @@ function blob_fixup() {
             sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             ;;
+        vendor/lib/libcvface_api.so)
+            "${PATCHELF}" --remove-needed "libjnigraphics.so" "${2}"
+            ;;
     esac
 }
 
