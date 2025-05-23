@@ -20,7 +20,7 @@ cc_library_static {
     srcs: ["init_A57.cpp"],
     whole_static_libs: ["libinit_A57"],
     include_dirs: [
-        "system/libbase/include",
+        "system/core/base/include",
         "system/core/init"
     ],
     recovery_available: true,
