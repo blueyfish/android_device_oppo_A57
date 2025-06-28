@@ -60,14 +60,8 @@ static void determine_device() {
     // Match operator name
     if (prjVersion == 16061) {
         switch (operatorName) {
-            /* CN V1 */
+            /* China */
             case 8:
-            /* CN V2 */
-            case 10:
-            case 11:
-            /* CN V3 */
-            case 3:
-            case 5:
                 set_variant_props(a57_info);
                 break;
 
@@ -90,8 +84,10 @@ static void determine_device() {
                 set_variant_props(cph1701_info);
                 break;
             }
+
             default:
-                LOG(ERROR) << "Unknown operator variant";
+                LOG(WARNING) << "Unknown operator variant, setting A57";
+                set_variant_props(a57_info);
                 break;
         }
 
