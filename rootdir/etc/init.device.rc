@@ -9,3 +9,6 @@ on property:ro.vendor.wlan_fw_variant=16061
 
 on property:ro.vendor.wlan_fw_variant=16061_second
     mount overlay overlay /vendor/firmware/wlan/prima ro lowerdir=/vendor/firmware/wlan/16061_second:/vendor/firmware/wlan/prima
+
+on property:ro.vendor.wlan_fw_variant=16361
+    mount overlay overlay /vendor/firmware/wlan/prima ro lowerdir=/vendor/firmware/wlan/16361:/vendor/firmware/wlan/prima
