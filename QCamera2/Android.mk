@@ -133,6 +133,10 @@ ifneq (,$(filter msm8996 msmcobalt msmfalcon,$(TARGET_BOARD_PLATFORM)))
     LOCAL_CFLAGS += -DUBWC_PRESENT
 endif
 
+ifeq ($(TARGET_BROKEN_REPROCESS_BACKEND),true)
+LOCAL_CFLAGS += -DTARGET_BROKEN_REPROCESS_BACKEND
+endif
+
 #LOCAL_STATIC_LIBRARIES := libqcamera2_util
 LOCAL_C_INCLUDES += \
         $(call project-path-for,qcom-display)/libqservice

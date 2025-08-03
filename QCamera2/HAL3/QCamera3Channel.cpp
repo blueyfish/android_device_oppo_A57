@@ -3691,6 +3691,10 @@ void QCamera3PicChannel::overrideYuvSize(uint32_t width, uint32_t height)
  *==========================================================================*/
 reprocess_type_t QCamera3PicChannel::getReprocessType()
 {
+#ifdef TARGET_BROKEN_REPROCESS_BACKEND
+    /* disable reprocess for targets with broken jpeg backends */
+    return REPROCESS_TYPE_NONE;
+#else
     /* a picture channel could either use the postprocessor for reprocess+jpeg
        or only for reprocess */
     reprocess_type_t expectedReprocess;
@@ -3701,6 +3705,7 @@ reprocess_type_t QCamera3PicChannel::getReprocessType()
     }
     LOGH("expectedReprocess from Pic Channel is %d", expectedReprocess);
     return expectedReprocess;
+#endif
 }
 
 

@@ -10142,12 +10142,13 @@ int32_t QCamera3HardwareInterface::extractSceneMode(
  *==========================================================================*/
 bool QCamera3HardwareInterface::needRotationReprocess()
 {
+#ifndef TARGET_BROKEN_REPROCESS_BACKEND
     if ((gCamCapability[mCameraId]->qcom_supported_feature_mask & CAM_QCOM_FEATURE_ROTATION) > 0) {
         // current rotation is not zero, and pp has the capability to process rotation
         LOGH("need do reprocess for rotation");
         return true;
     }
-
+#endif
     return false;
 }
 
@@ -10189,12 +10190,17 @@ bool QCamera3HardwareInterface::needReprocess(cam_feature_mask_t postprocess_mas
  *==========================================================================*/
 bool QCamera3HardwareInterface::needJpegExifRotation()
 {
+#ifdef TARGET_BROKEN_REPROCESS_BACKEND
+    /* force usage of jpeg rotation for broken pp */
+    return true;
+#else
    /*If the pp does not have the ability to do rotation, enable jpeg rotation*/
     if (!(gCamCapability[mCameraId]->qcom_supported_feature_mask & CAM_QCOM_FEATURE_ROTATION)) {
        LOGD("Need use Jpeg EXIF Rotation");
        return true;
     }
     return false;
+#endif
 }
 
 /*===========================================================================

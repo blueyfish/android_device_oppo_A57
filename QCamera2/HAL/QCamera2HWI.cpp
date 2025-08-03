@@ -1722,6 +1722,10 @@ QCamera2HardwareInterface::QCamera2HardwareInterface(uint32_t cameraId)
     mFrameSkipEnd = 0;
     mLastPreviewFrameID = 0;
 
+#ifdef TARGET_BROKEN_REPROCESS_BACKEND
+    mUseJpegExifRotation = true;
+#endif
+
     //Load and read GPU library.
     lib_surface_utils = NULL;
     LINK_get_surface_pixel_alignment = NULL;
@@ -9127,6 +9131,10 @@ bool QCamera2HardwareInterface::isPreviewRestartEnabled()
  *==========================================================================*/
 bool QCamera2HardwareInterface::needReprocess()
 {
+#ifdef TARGET_BROKEN_REPROCESS_BACKEND
+    // Disable reprocess for broken backend
+    return false;
+#else
     bool needReprocess = false;
 
     if (!mParameters.isJpegPictureFormat() &&
@@ -9155,6 +9163,7 @@ bool QCamera2HardwareInterface::needReprocess()
 
     LOGH("needReprocess %s", needReprocess ? "true" : "false");
     return needReprocess;
+#endif
 }
 
 
@@ -9170,6 +9179,7 @@ bool QCamera2HardwareInterface::needReprocess()
  *==========================================================================*/
 bool QCamera2HardwareInterface::needRotationReprocess()
 {
+#ifndef TARGET_BROKEN_REPROCESS_BACKEND
     if (!mParameters.isJpegPictureFormat() &&
         !mParameters.isNV21PictureFormat()) {
         // RAW image, no need to reprocess
@@ -9191,7 +9201,7 @@ bool QCamera2HardwareInterface::needRotationReprocess()
                  mParameters.getJpegRotation());
         return true;
     }
-
+#endif
     return false;
 }
 
