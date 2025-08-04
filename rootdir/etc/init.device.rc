@@ -4,11 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on property:ro.vendor.wlan_fw_variant=16061
-    mount overlay overlay /vendor/firmware/wlan/prima ro lowerdir=/vendor/firmware/wlan/16061:/vendor/firmware/wlan/prima
+service vendor.device-sh /vendor/bin/init.device.sh
+    user root
+    group root
+    oneshot
 
-on property:ro.vendor.wlan_fw_variant=16061_second
-    mount overlay overlay /vendor/firmware/wlan/prima ro lowerdir=/vendor/firmware/wlan/16061_second:/vendor/firmware/wlan/prima
+on early-init
+    exec_start vendor.device-sh
+    setprop ro.boot.product.hardware.sku ${ro.separate.soft}
 
-on property:ro.vendor.wlan_fw_variant=16361
-    mount overlay overlay /vendor/firmware/wlan/prima ro lowerdir=/vendor/firmware/wlan/16361:/vendor/firmware/wlan/prima
+    # WiFi NV
+    mount overlay overlay /vendor/firmware/wlan/prima ro lowerdir=/vendor/firmware/wlan/${ro.vendor.wifi.nv}:/vendor/firmware/wlan/prima
