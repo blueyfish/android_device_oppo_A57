@@ -30,3 +30,9 @@ sys.listeners.registered                u:object_r:vendor_tee_listener_prop:s0
 # RIL
 ro.build.version.ota                    u:object_r:oppo_build_info_prop:s0
 ctl.vendor.imsrcsd                      u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
+
+# WiFi
+ro.vendor.wifi.nv                       u:object_r:vendor_wifi_nv_prop:s0
+
+# Version
+ro.separate.soft                        u:object_r:system_oplus_project_prop:s0

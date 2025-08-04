@@ -1,6 +1,8 @@
 typeattribute vendor_init data_between_core_and_vendor_violators;
 
-set_prop(vendor_init, camera_prop);
+set_prop(vendor_init, camera_prop)
+get_prop(vendor_init, vendor_wifi_nv_prop)
+get_prop(vendor_init, system_oplus_project_prop)
 
 allow vendor_init {
   bluetooth_data_file

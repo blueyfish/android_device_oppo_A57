@@ -21,6 +21,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.A57                     u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.A57	                      u:object_r:hal_lineage_touch_default_exec:s0
 
+# Init
+/(vendor|system/vendor)/bin/init.device.sh                                  u:object_r:qti_init_shell_exec:s0
+
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                                       u:object_r:vendor_idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?                                 u:object_r:vendor_keylayout_file:s0

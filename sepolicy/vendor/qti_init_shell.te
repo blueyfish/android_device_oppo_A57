@@ -1,3 +1,8 @@
 typeattribute qti_init_shell data_between_core_and_vendor_violators;
 
 allow qti_init_shell bluetooth_data_file:file r_file_perms;
+
+allow qti_init_shell proc_oppo_info:dir r_dir_perms;
+allow qti_init_shell proc_oppo_info:file r_file_perms;
+set_prop(qti_init_shell, vendor_wifi_nv_prop)
+set_prop(qti_init_shell, system_oplus_project_prop)
