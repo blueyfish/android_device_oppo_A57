@@ -1,11 +1,5 @@
 <manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
-        <name>vendor.lineage.livedisplay</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IPictureAdjustment/default</fqname>
-        <fqname>@2.0::IAdaptiveBacklight/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.lineage.touch</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IKeyDisabler/default</fqname>
