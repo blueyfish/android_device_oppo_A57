@@ -1964,6 +1964,27 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                     mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].height =
                             (int32_t)largeYuv888Size.height;
                 }
+
+                /* For s5k3p3sp/s5k3p8sp (front camera), dimensions with
+                 * width above 2500 for capture is disabled by OPPO.
+                 * Select a suitable dimension to resolve green border
+                 * issue as proprietary blobs do not support high res.
+                 */
+                if ((!strcmp(gCamCapability[mCameraId]->sensor_name, "s5k3p3sp")
+                    || !strcmp(gCamCapability[mCameraId]->sensor_name, "s5k3p8sp"))
+                    && mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].width > 2500) {
+                    int targetRatio = newStream->width / newStream->height;
+                    for (size_t i = 0; i < gCamCapability[mCameraId]->picture_sizes_tbl_cnt; ++i) {
+                        int w = gCamCapability[mCameraId]->picture_sizes_tbl[i].width;
+                        int h = gCamCapability[mCameraId]->picture_sizes_tbl[i].height;
+                        int ratio = w / h;
+                        if (w < 2500 && ratio == targetRatio) {
+                            mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].width = w;
+                            mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].height = h;
+                            break;
+                        }
+                    }
+                }
                 break;
             case HAL_PIXEL_FORMAT_RAW_OPAQUE:
             case HAL_PIXEL_FORMAT_RAW16:
