@@ -18,7 +18,7 @@ cc_library_shared {
     proprietary: true,
     defaults: ["hidl_defaults"],
     srcs: [
-        "libshims.cpp",
+        "libshims_sensors.cpp",
     ],
     cflags: [
         "-Werror",
@@ -26,6 +26,8 @@ cc_library_shared {
         "-Wall",
     ],
     shared_libs: [
+        "libbase",
+        "libsensorndkbridge",
         "libutils",
     ],
 }
