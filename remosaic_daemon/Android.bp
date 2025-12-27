@@ -1,0 +1,22 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libremosaic_daemon",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "remosaic_daemon.cpp",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wextra",
+        "-Wall",
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+}
