@@ -1,0 +1,110 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc_xml {
+    name: "imx258_chromatix.xml",
+    src: "imx258_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "imx258_truly_chromatix.xml",
+    src: "imx258_truly_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "imx298_chromatix.xml",
+    src: "imx298_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "imx298_sunny_chromatix.xml",
+    src: "imx298_sunny_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "imx398_chromatix.xml",
+    src: "imx398_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "imx398_sunny_chromatix.xml",
+    src: "imx398_sunny_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "ov13855_f13v08b_chromatix.xml",
+    src: "ov13855_f13v08b_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3l8_chromatix.xml",
+    src: "s5k3l8_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p3sp_chromatix.xml",
+    src: "s5k3p3sp_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p3sp_ofilm_chromatix.xml",
+    src: "s5k3p3sp_ofilm_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p3sp_sunny_chromatix.xml",
+    src: "s5k3p3sp_sunny_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p8_chromatix.xml",
+    src: "s5k3p8_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p8sp_chromatix.xml",
+    src: "s5k3p8sp_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p8sp_sunny_chromatix.xml",
+    src: "s5k3p8sp_sunny_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "s5k3p8sp_truly_chromatix.xml",
+    src: "s5k3p8sp_truly_chromatix.xml",
+    relative_install_path: "camera",
+    soc_specific: true,
+}
