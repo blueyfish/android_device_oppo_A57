@@ -260,18 +260,6 @@ vendor/lib/libchromatix_s5k3p8sp_snapshot_fb_sunny.so
 vendor/lib/libchromatix_s5k3p8sp_snapshot.so
 vendor/lib/libchromatix_s5k3p8sp_snapshot_sunny.so
 
-# Camera configs
-system/etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
-system/etc/camera/imx258_chromatix.xml:vendor/etc/camera/imx258_chromatix.xml
-system/etc/camera/imx258_truly_chromatix.xml:vendor/etc/camera/imx258_truly_chromatix.xml
-system/etc/camera/ov13855_f13v08b_chromatix.xml:vendor/etc/camera/ov13855_f13v08b_chromatix.xml
-system/etc/camera/s5k3l8_chromatix.xml:vendor/etc/camera/s5k3l8_chromatix.xml
-system/etc/camera/s5k3p3sp_chromatix.xml:vendor/etc/camera/s5k3p3sp_chromatix.xml
-system/etc/camera/s5k3p3sp_ofilm_chromatix.xml:vendor/etc/camera/s5k3p3sp_ofilm_chromatix.xml
-system/etc/camera/s5k3p3sp_sunny_chromatix.xml:vendor/etc/camera/s5k3p3sp_sunny_chromatix.xml
-system/etc/camera/s5k3p8sp_chromatix.xml:vendor/etc/camera/s5k3p8sp_chromatix.xml
-system/etc/camera/s5k3p8sp_sunny_chromatix.xml:vendor/etc/camera/s5k3p8sp_sunny_chromatix.xml
-
 # Camera eeproms
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_imx258_gt24c64_eeprom.so
