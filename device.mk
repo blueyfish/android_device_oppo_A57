@@ -194,6 +194,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libflash_pmic
 
+# Camera
+PRODUCT_PACKAGES += \
+    A57_camera_config.xml
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
