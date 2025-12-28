@@ -103,13 +103,6 @@ special_mode_mask values:
       <CPPSnapshot>s5k3p8sp_cpp_fb_remosaic</CPPSnapshot>
       <CPPPreview>s5k3p8sp_cpp_fb_preview</CPPPreview>
     </ChromatixName> 
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_CMCC">
-      <ISPPreview>s5k3p8sp_snapshot_cmcc</ISPPreview>
-      <ISPSnapshot>s5k3p8sp_snapshot_cmcc</ISPSnapshot>
-      <CPPPreview>s5k3p8sp_cpp_preview_cmcc</CPPPreview>
-      <CPPSnapshot>s5k3p8sp_cpp_snapshot_cmcc</CPPSnapshot>
-      <A3Preview>s5k3p8sp_a3_zsl_preview_cmcc</A3Preview>
-    </ChromatixName> 
     <ChromatixName sensor_resolution_index="1" special_mode_mask="0">
       <ISPPreview>s5k3p8sp_snapshot</ISPPreview>
       <ISPSnapshot>s5k3p8sp_snapshot</ISPSnapshot>
@@ -128,45 +121,12 @@ special_mode_mask values:
     <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_PANORAMA">
       <A3Preview>s5k3p8sp_a3_panorama</A3Preview>
     </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_GIF">
-      <CPPSnapshot>s5k3p8sp_cpp_snapshot_gif</CPPSnapshot>
-    </ChromatixName>	
     <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_FACE_BEAUTY">
       <A3Preview>s5k3p8sp_a3_fb</A3Preview>
       <ISPPreview>s5k3p8sp_snapshot_fb</ISPPreview>
       <ISPSnapshot>s5k3p8sp_snapshot_fb</ISPSnapshot>
       <CPPPreview>s5k3p8sp_cpp_fb_preview</CPPPreview>
       <CPPSnapshot>s5k3p8sp_cpp_fb_snapshot_4m</CPPSnapshot>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_WECHAT">
-      <ISPPreview>s5k3p8sp_snapshot_wchat</ISPPreview>
-      <ISPSnapshot>s5k3p8sp_snapshot_wchat</ISPSnapshot>
-      <CPPPreview>s5k3p8sp_cpp_preview_wchat</CPPPreview>
-      <CPPVideo>s5k3p8sp_cpp_preview_wchat</CPPVideo>
-      <A3Preview>s5k3p8sp_a3_default_preview_wchat</A3Preview>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_OTHERAPK">
-      <ISPCommon>s5k3p8sp_common_otherapk</ISPCommon>
-      <ISPPreview>s5k3p8sp_snapshot_otherapk_remosaic</ISPPreview>
-      <ISPSnapshot>s5k3p8sp_snapshot_otherapk_remosaic</ISPSnapshot>	
-      <CPPPreview>s5k3p8sp_cpp_preview_otherapk</CPPPreview>
-      <CPPVideo>s5k3p8sp_cpp_preview_otherapk</CPPVideo>
-      <CPPSnapshot>s5k3p8sp_cpp_snapshot_otherapk_remosaic</CPPSnapshot>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_OTHERAPK">
-      <ISPCommon>s5k3p8sp_common_otherapk</ISPCommon>
-      <ISPPreview>s5k3p8sp_snapshot_otherapk</ISPPreview>
-      <ISPSnapshot>s5k3p8sp_snapshot_otherapk</ISPSnapshot>	
-      <CPPPreview>s5k3p8sp_cpp_preview_otherapk</CPPPreview>
-      <CPPVideo>s5k3p8sp_cpp_preview_otherapk</CPPVideo>
-      <CPPSnapshot>s5k3p8sp_cpp_snapshot_otherapk</CPPSnapshot>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_CMCC">
-      <ISPPreview>s5k3p8sp_snapshot_cmcc</ISPPreview>
-      <ISPSnapshot>s5k3p8sp_snapshot_cmcc</ISPSnapshot>
-      <CPPPreview>s5k3p8sp_cpp_preview_cmcc</CPPPreview>
-      <CPPSnapshot>s5k3p8sp_cpp_snapshot_cmcc</CPPSnapshot>
-      <A3Preview>s5k3p8sp_a3_zsl_preview_cmcc</A3Preview>
     </ChromatixName>
     <ChromatixName sensor_resolution_index="2" special_mode_mask="0">
       <ISPPreview>s5k3p8sp_snapshot</ISPPreview>

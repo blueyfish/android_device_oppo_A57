@@ -106,10 +106,6 @@ special_mode_mask values:
     <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_HDR">
       <ISPSnapshot>s5k3l8_snapshot_hdr</ISPSnapshot>
     </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_GIF">
-      <CPPSnapshot>s5k3l8_cpp_snapshot_special</CPPSnapshot>
-      <ISPSnapshot>s5k3l8_snapshot_special</ISPSnapshot>
-    </ChromatixName>
     <ChromatixName sensor_resolution_index="1" special_mode_mask="0">
       <ISPPreview>s5k3l8_snapshot</ISPPreview>
       <ISPSnapshot>s5k3l8_snapshot</ISPSnapshot>
@@ -131,15 +127,6 @@ special_mode_mask values:
       <CPPLiveshot>s5k3l8_cpp_video</CPPLiveshot>
       <A3Preview>s5k3l8_default_video_ak7345</A3Preview>
       <A3Video>s5k3l8_default_video_ak7345</A3Video>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_SPECIAL">
-      <CPPPreview>s5k3l8_cpp_preview_special</CPPPreview>
-      <A3Preview>s5k3l8_default_video_webcat</A3Preview>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_WECHAT">
-      <CPPPreview>s5k3l8_cpp_preview_wchat</CPPPreview>
-      <CPPVideo>s5k3l8_cpp_preview_wchat</CPPVideo>
-      <A3Preview>s5k3l8_default_video_webcat</A3Preview>
     </ChromatixName>
     <ChromatixName sensor_resolution_index="3" special_mode_mask="0">
       <ISPPreview>s5k3l8_hfr_90</ISPPreview>

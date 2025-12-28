@@ -102,27 +102,11 @@ special_mode_mask values:
       <CPPPreview>s5k3p3sp_cpp_preview_fb</CPPPreview>  
       <CPPSnapshot>s5k3p3sp_cpp_snapshot_fb</CPPSnapshot>
     </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_CMCC">
-      <ISPPreview>s5k3p3sp_snapshot_cmcc</ISPPreview>
-      <ISPSnapshot>s5k3p3sp_snapshot_cmcc</ISPSnapshot>
-      <A3Preview>s5k3p3sp_zsl_preview_cmcc_ofilm</A3Preview>
-      <A3Video>s5k3p3sp_default_video_cmcc_ofilm</A3Video>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_WECHAT">
-      <ISPPreview>s5k3p3sp_preview_special</ISPPreview>
-      <ISPSnapshot>s5k3p3sp_preview_special</ISPSnapshot>
-      <CPPPreview>s5k3p3sp_cpp_preview_special</CPPPreview>
-      <CPPVideo>s5k3p3sp_cpp_preview_special</CPPVideo>
-      <A3Preview>s5k3p3sp_a3_zsl_preview_special_ofilm</A3Preview>
-    </ChromatixName>
     <ChromatixName sensor_resolution_index="0" special_mode_mask="FLASH">
       <CPPSnapshot>s5k3p3sp_cpp_flash_snapshot</CPPSnapshot>
     </ChromatixName>
     <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_PANORAMA">
       <A3Preview>s5k3p3sp_a3_zsl_preview_panorama_ofilm</A3Preview>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_GIF">
-      <CPPSnapshot>s5k3p3sp_cpp_snapshot_gif</CPPSnapshot>
     </ChromatixName>
     <ChromatixName sensor_resolution_index="1" special_mode_mask="0">
       <ISPPreview>s5k3p3sp_snapshot</ISPPreview>

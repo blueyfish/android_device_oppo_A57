@@ -106,10 +106,6 @@ special_mode_mask values:
     <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_HDR">
       <ISPSnapshot>ov13855_f13v08b_snapshot_hdr</ISPSnapshot>
     </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_GIF">
-      <CPPSnapshot>ov13855_f13v08b_cpp_snapshot_special</CPPSnapshot>
-      <ISPSnapshot>ov13855_f13v08b_snapshot_special</ISPSnapshot>
-    </ChromatixName>
     <ChromatixName sensor_resolution_index="1" special_mode_mask="0">
       <ISPPreview>ov13855_f13v08b_snapshot</ISPPreview>
       <ISPSnapshot>ov13855_f13v08b_snapshot</ISPSnapshot>
@@ -142,16 +138,6 @@ special_mode_mask values:
       <CPPLiveshot>ov13855_f13v08b_cpp_video</CPPLiveshot>
       <A3Preview>ov13855_f13v08b_default_video_bu64297</A3Preview>
       <A3Video>ov13855_f13v08b_default_video_bu64297</A3Video>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_SPECIAL">
-      <CPPPreview>ov13855_f13v08b_cpp_preview_special</CPPPreview>
-      <CPPVideo>ov13855_f13v08b_cpp_preview_special</CPPVideo>
-      <A3Preview>ov13855_f13v08b_default_video_webchat</A3Preview>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_WECHAT">
-      <CPPPreview>ov13855_f13v08b_cpp_preview_wchat</CPPPreview>
-      <CPPVideo>ov13855_f13v08b_cpp_preview_wchat</CPPVideo>
-      <A3Preview>ov13855_f13v08b_default_video_webchat</A3Preview>
     </ChromatixName>
      <ChromatixName sensor_resolution_index="4" special_mode_mask="0">
       <ISPPreview>ov13855_f13v08b_hfr_60</ISPPreview>

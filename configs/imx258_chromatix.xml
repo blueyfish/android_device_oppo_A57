@@ -104,12 +104,6 @@ special_mode_mask values:
       <CPPPreview>imx258_cpp_preview_panorama</CPPPreview>
       <CPPSnapshot>imx258_cpp_snapshot_panorama</CPPSnapshot>
     </ChromatixName>
-    <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_CMCC">
-      <ISPPreview>imx258_snapshot_cmcc</ISPPreview>
-      <ISPSnapshot>imx258_snapshot_cmcc</ISPSnapshot>
-      <A3Preview>imx258_zsl_preview_cmcc</A3Preview>
-      <A3Video>imx258_default_video_cmcc</A3Video>
-    </ChromatixName>
     <ChromatixName sensor_resolution_index="0" special_mode_mask="OPPO_HDR">
       <ISPSnapshot>imx258_snapshot_hdr</ISPSnapshot>
     </ChromatixName>
@@ -121,12 +115,6 @@ special_mode_mask values:
       <A3Preview>imx258_zsl_preview_16_9</A3Preview>
       <A3Video>imx258_4k_video_bu64244gwz</A3Video>
     </ChromatixName>
-    <ChromatixName sensor_resolution_index="1" special_mode_mask="OPPO_CMCC">
-      <ISPPreview>imx258_snapshot_cmcc</ISPPreview>
-      <ISPSnapshot>imx258_snapshot_cmcc</ISPSnapshot>
-      <A3Preview>imx258_zsl_preview_cmcc</A3Preview>
-      <A3Video>imx258_default_video_cmcc</A3Video>
-    </ChromatixName>
     <ChromatixName sensor_resolution_index="2" special_mode_mask="0">
       <ISPPreview>imx258_preview</ISPPreview>
       <ISPSnapshot>imx258_preview</ISPSnapshot>
@@ -134,19 +122,6 @@ special_mode_mask values:
       <CPPVideo>imx258_cpp_video</CPPVideo>
       <A3Preview>imx258_default_preview_bu64244gwz</A3Preview>
       <A3Video>imx258_default_video_bu64244gwz</A3Video>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_SPECIAL">
-      <A3Preview>imx258_zsl_preview_special</A3Preview>
-      <ISPPreview>imx258_preview_special</ISPPreview>
-      <ISPSnapshot>imx258_preview_special</ISPSnapshot>
-      <CPPPreview>imx258_cpp_preview_special</CPPPreview>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_WECHAT">
-      <CPPPreview>imx258_cpp_preview_wchat</CPPPreview>
-      <CPPVideo>imx258_cpp_preview_wchat</CPPVideo>
-    </ChromatixName>
-    <ChromatixName sensor_resolution_index="2" special_mode_mask="OPPO_GIF">
-      <CPPSnapshot>imx258_cpp_snapshot_special</CPPSnapshot>
     </ChromatixName>
     <ChromatixName sensor_resolution_index="3" special_mode_mask="0">
       <ISPCommon>imx258_common_video</ISPCommon>
