@@ -16,7 +16,9 @@
 
 #define LOG_TAG "TouchscreenGestureService"
 
+#include <algorithm>
 #include <unordered_map>
+#include <vector>
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
@@ -43,6 +45,8 @@ const std::unordered_map<int32_t, GestureInfo> kGestureInfoMap = {
     {10, {254, "Letter O"}},
     {11, {261, "Letter W"}},
 };
+
+std::vector<int32_t> gestureBuf(kGestureInfoMap.size(), false);
 }  // anonymous namespace
 
 namespace vendor {
@@ -50,6 +54,8 @@ namespace lineage {
 namespace touch {
 namespace V1_0 {
 namespace implementation {
+
+constexpr const char kControlPath[] = "/proc/touchpanel/gesture_enable";
 
 Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
     std::vector<Gesture> gestures;
@@ -63,7 +69,20 @@ Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb re
 }
 
 Return<bool> TouchscreenGesture::setGestureEnabled(
-    const ::vendor::lineage::touch::V1_0::Gesture&, bool) {
+    const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enable) {
+
+    const auto entry = kGestureInfoMap.find(gesture.id);
+    if (entry == kGestureInfoMap.end()) {
+        return false;
+    }
+    gestureBuf[gesture.id] = enable;
+
+    bool anyEnabled = std::find(gestureBuf.begin(),gestureBuf.end(), true) == gestureBuf.end();
+    if (!android::base::WriteStringToFile((anyEnabled ? "0" : "1"), kControlPath)) {
+         LOG(ERROR) << "Failed to write " << kControlPath;
+         return false;
+    }
+
     return true;
 }
 
