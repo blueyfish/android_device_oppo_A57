@@ -2528,6 +2528,7 @@ typedef struct {
     uint32_t hdr_enable;
     uint32_t hdr_need_1x; /* when CAM_QCOM_FEATURE_HDR enabled, indicate if 1x is needed for output */
     cam_hdr_mode_enum_t hdr_mode;
+    volatile char oppo_reserved[6];
 } cam_hdr_param_t;
 
 typedef struct {
