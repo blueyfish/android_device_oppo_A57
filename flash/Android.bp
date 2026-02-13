@@ -1,0 +1,29 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libflash_pmic",
+    vendor: true,
+    compile_multilib: "prefer32",
+    srcs: ["pmic.c"],
+    header_libs: ["generated_kernel_headers"],
+}
+
+cc_library_shared {
+    name: "libflash_lm3642",
+    vendor: true,
+    compile_multilib: "prefer32",
+    srcs: ["lm3642.c"],
+    header_libs: ["generated_kernel_headers"],
+}
+
+cc_library_shared {
+    name: "libflash_lm3643",
+    vendor: true,
+    compile_multilib: "prefer32",
+    srcs: ["lm3643.c"],
+    header_libs: ["generated_kernel_headers"],
+}
