@@ -191,6 +191,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.0-service.A57
 
+PRODUCT_PACKAGES += \
+    libflash_pmic
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
