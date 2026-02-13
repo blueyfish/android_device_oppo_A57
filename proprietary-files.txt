@@ -15,7 +15,6 @@ system/etc/acdbdata/16061/Speaker_cal.acdb:vendor/etc/acdbdata/MTP/MTP_Speaker_c
 system/bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 vendor/lib/libchromaflash.so
 vendor/lib/libcvface_api.so
-vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so

@@ -34,6 +34,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     A57_camera_config.xml
 
+PRODUCT_PACKAGES += \
+    libflash_pmic
+
 # FM
 BOARD_HAVE_QCOM_FM := true
 
