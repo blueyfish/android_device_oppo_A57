@@ -321,7 +321,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab_ramdisk.qcom \
-    fpc1020.rc \
     init.oppo.usb.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
