@@ -8,6 +8,7 @@ DEVICE_PATH := device/oppo/A57
 
 # Inherit from the common device configuration.
 TARGET_OPPO_PLATFORM := msm8937
+TARGET_HAS_FM := true
 $(call inherit-product, device/oppo/thortanium-common/thortanium.mk)
 
 # Overlays
@@ -36,9 +37,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libflash_pmic
-
-# FM
-BOARD_HAVE_QCOM_FM := true
 
 # Input
 PRODUCT_COPY_FILES += \
