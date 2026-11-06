@@ -1979,6 +1979,32 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
             }
         }
 
+        /* For s5k3p3sp/s5k3p8sp (front camera), dimensions with
+         * width above 2500 for capture is disabled by OPPO.
+         * Select a suitable dimension to resolve green border
+         * issue as proprietary blobs do not support high res.
+         */
+        #if defined(TARGET_BROKEN_REPROCESS_BACKEND)
+        isRawStreamRequested = true;
+        #endif
+
+        if ((!strcmp(gCamCapability[mCameraId]->sensor_name, "s5k3p3sp")
+            || !strcmp(gCamCapability[mCameraId]->sensor_name, "s5k3p8sp"))
+            && mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].width > 2500
+            && isRawStreamRequested) {
+            int targetRatio = newStream->width / newStream->height;
+            for (size_t i = 0; i < gCamCapability[mCameraId]->picture_sizes_tbl_cnt; ++i) {
+                int w = gCamCapability[mCameraId]->picture_sizes_tbl[i].width;
+                int h = gCamCapability[mCameraId]->picture_sizes_tbl[i].height;
+                int ratio = w / h;
+                if (w < 2500 && ratio == targetRatio) {
+                    mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].width = w;
+                    mStreamConfigInfo.stream_sizes[mStreamConfigInfo.num_streams].height = h;
+                    break;
+                }
+            }
+        }
+
         setPAAFSupport(mStreamConfigInfo.postprocess_mask[mStreamConfigInfo.num_streams],
                 (cam_stream_type_t) mStreamConfigInfo.type[mStreamConfigInfo.num_streams],
                 gCamCapability[mCameraId]->color_arrangement);
@@ -10216,12 +10242,13 @@ int32_t QCamera3HardwareInterface::extractSceneMode(
  *==========================================================================*/
 bool QCamera3HardwareInterface::needRotationReprocess()
 {
+#ifndef TARGET_BROKEN_REPROCESS_BACKEND
     if ((gCamCapability[mCameraId]->qcom_supported_feature_mask & CAM_QCOM_FEATURE_ROTATION) > 0) {
         // current rotation is not zero, and pp has the capability to process rotation
         LOGH("need do reprocess for rotation");
         return true;
     }
-
+#endif
     return false;
 }
 
@@ -10263,12 +10290,17 @@ bool QCamera3HardwareInterface::needReprocess(cam_feature_mask_t postprocess_mas
  *==========================================================================*/
 bool QCamera3HardwareInterface::needJpegExifRotation()
 {
+#ifdef TARGET_BROKEN_REPROCESS_BACKEND
+    /* force usage of jpeg rotation for broken pp */
+    return true;
+#else
    /*If the pp does not have the ability to do rotation, enable jpeg rotation*/
     if (!(gCamCapability[mCameraId]->qcom_supported_feature_mask & CAM_QCOM_FEATURE_ROTATION)) {
        LOGD("Need use Jpeg EXIF Rotation");
        return true;
     }
     return false;
+#endif
 }
 
 /*===========================================================================
