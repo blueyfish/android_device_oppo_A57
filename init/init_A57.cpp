@@ -56,8 +56,8 @@ static const variant_info_t cph1701fw_info = {
 };
 
 static void determine_device() {
-    std::string kPrjVersion, kOperatorName;
-    int prjVersion, operatorName = 0;
+    std::string kPrjVersion, kOperatorName, kPcbVersion;
+    int prjVersion, operatorName, pcbVersion = 0;
 
     // Determine project version
     ReadFileToString("/proc/oppoVersion/prjVersion", &kPrjVersion);
@@ -67,12 +67,16 @@ static void determine_device() {
     ReadFileToString("/proc/oppoVersion/operatorName", &kOperatorName);
     operatorName = std::stoi(kOperatorName);
 
+    // Determine PCB name
+    ReadFileToString("/proc/oppoVersion/pcbVersion", &kPcbVersion);
+    pcbVersion = std::stoi(kPcbVersion);
+
     // Match operator name
     if (prjVersion == 16061) {
         switch (operatorName) {
             /* China */
             case 8:
-                switch (ReadPcbVersion()) {
+                switch (pcbVersion) {
                     /* 16062 -> A57t */
                     case 3:
                     case 5:
